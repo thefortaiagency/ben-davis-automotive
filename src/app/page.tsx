@@ -101,11 +101,11 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
       {/* Hero Section */}
       <section className="relative h-96 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/hero-image.jpg')`
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('/hero-image.jpg')`
           }}
         ></div>
         
@@ -115,9 +115,9 @@ export default function Home() {
               <Image
                 src="/ben-davis-logo.jpg"
                 alt="Ben Davis Automotive Logo"
-                width={80}
-                height={80}
-                className="rounded-full border-4 border-white shadow-lg"
+                width={90}
+                height={90}
+                className="rounded-full border-4 border-white shadow-2xl ring-4 ring-white/30"
               />
               <div>
                 <h1 className="text-5xl font-bold mb-2">Ben Davis Automotive</h1>
