@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* Centered Logo Below Hero */}
-      <div className="flex justify-center -mt-12 relative z-20">
+      <div className="flex justify-center py-8 bg-white">
         <Image
           src="/ben-davis-logo.jpg"
           alt="Ben Davis Automotive Logo"
@@ -148,7 +148,7 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           
           {/* Left Column - Story & History */}
