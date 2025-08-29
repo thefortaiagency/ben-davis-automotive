@@ -274,31 +274,24 @@ export default function Home() {
 
             {/* Contact Cards */}
             <div className="grid grid-cols-1 gap-6">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl shadow-lg p-6">
-                <h4 className="font-bold text-xl mb-4">Visit Our Locations</h4>
-                <div className="space-y-3">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl shadow-lg p-8">
+                <h4 className="font-bold text-2xl mb-4">Visit Our Locations</h4>
+                <div className="space-y-4">
                   <div>
-                    <p className="font-semibold">Ben Davis Chevrolet-Buick</p>
-                    <p className="text-sm opacity-90">931 W 7th St, Auburn, IN</p>
-                    <p className="text-sm opacity-90">(855) 366-5595</p>
+                    <p className="font-semibold text-lg">Ben Davis Chevrolet-Buick</p>
+                    <p className="opacity-90">931 W 7th St, Auburn, IN</p>
+                    <p className="opacity-90">(855) 366-5595</p>
                   </div>
-                  <div>
-                    <p className="font-semibold">Ben Davis Ford</p>
-                    <p className="text-sm opacity-90">400 S Grandstaff Dr, Auburn, IN</p>
-                    <p className="text-sm opacity-90">(855) 388-2635</p>
+                  <div className="border-t border-white/20 pt-4">
+                    <p className="font-semibold text-lg">Ben Davis Ford</p>
+                    <p className="opacity-90">400 S Grandstaff Dr, Auburn, IN</p>
+                    <p className="opacity-90">(855) 388-2635</p>
                   </div>
-                </div>
-              </div>
-              
-              <div className="bg-green-50 border border-green-200 rounded-xl shadow-lg p-6">
-                <h4 className="font-bold text-xl text-green-900 mb-2">Customer Excellence</h4>
-                <p className="text-3xl font-bold text-green-600 mb-2">4.7 ⭐</p>
-                <p className="text-green-700 mb-4">1,480+ Reviews</p>
-                <div className="text-sm text-green-700">
-                  <p><strong>Service Hours:</strong></p>
-                  <p>Mon-Fri: 8:30 AM - 6:00 PM</p>
-                  <p>Just off I-69 at exit 329</p>
-                  <p>10 minutes north of Fort Wayne</p>
+                  <div className="border-t border-white/20 pt-4">
+                    <p className="text-sm opacity-90">Just off I-69 at exit 329</p>
+                    <p className="text-sm opacity-90">10 minutes north of Fort Wayne</p>
+                    <p className="text-sm opacity-90 mt-2">Service Hours: Mon-Fri 8:30 AM - 6:00 PM</p>
+                  </div>
                 </div>
               </div>
             </div>
