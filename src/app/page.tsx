@@ -149,152 +149,106 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Cards Grid - 2x2 Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           
-          {/* Left Column - Story & History */}
-          <div className="space-y-8">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Auburn Legacy</h2>
-              <div className="prose prose-blue max-w-none">
-                <p className="text-gray-700 mb-4 text-lg">
-                  Welcome to Ben Davis Automotive, where three generations of the Davis family have 
-                  served Auburn and Northeast Indiana with pride since 1980. Founded by Ben Davis 
-                  (1937-2014), our dealerships embody the entrepreneurial spirit and automotive 
-                  heritage that makes Auburn the "Home of the Classics."
-                </p>
-                <p className="text-gray-700 mb-4">
-                  Ben Davis saw an opportunity in 1980 when he purchased the former Rohm dealership, 
-                  establishing Ben Davis Chevrolet. His vision was simple yet profound: treat every 
-                  customer like family. This philosophy earned him induction into the DeKalb County 
-                  Business Hall of Fame in 2012.
-                </p>
-                <p className="text-gray-700 mb-4">
-                  Today, under the leadership of CEO Brent Davis, we operate Ben Davis Chevrolet-Buick, 
-                  Ben Davis Ford, and the fastest-growing RV dealership in Northern Indiana. The third 
-                  generation of the Davis family is now involved, ensuring our commitment to Auburn 
-                  continues for decades to come.
-                </p>
-              </div>
+          {/* Card 1 - Our Legacy */}
+          <div className="bg-white rounded-xl shadow-lg p-8 h-full">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Auburn Legacy</h2>
+            <p className="text-gray-700 mb-4">
+              Founded by Ben Davis (1937-2014), we've served Auburn and Northeast Indiana since 1980. 
+              Three generations of the Davis family continue the tradition of treating every customer like family.
+            </p>
+            <div className="bg-red-50 rounded-lg p-4 mt-4">
+              <p className="text-3xl font-bold text-red-800">44+</p>
+              <p className="text-sm text-gray-600">Years of Service</p>
             </div>
+          </div>
 
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Auburn: Home of the Classics</h3>
-              <p className="text-gray-700 mb-4">
-                Auburn's automotive story began in 1900 with the Auburn Automobile Company. At its 
-                peak, the company sold 34,000 cars annually through 100+ international dealers. 
-                Though the Great Depression ended production in 1937, Auburn's automotive spirit 
-                lives on through the Auburn Cord Duesenberg Museum and businesses like ours.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mt-6">
-                <div className="bg-white rounded-lg p-4 shadow">
-                  <p className="text-3xl font-bold text-blue-600">1900</p>
-                  <p className="text-sm text-gray-600">Auburn Auto Founded</p>
-                </div>
-                <div className="bg-white rounded-lg p-4 shadow">
-                  <p className="text-3xl font-bold text-blue-600">1980</p>
-                  <p className="text-sm text-gray-600">Ben Davis Opens</p>
-                </div>
-                <div className="bg-white rounded-lg p-4 shadow">
-                  <p className="text-3xl font-bold text-blue-600">44+</p>
-                  <p className="text-sm text-gray-600">Years Serving Auburn</p>
-                </div>
-                <div className="bg-white rounded-lg p-4 shadow">
-                  <p className="text-3xl font-bold text-blue-600">3</p>
-                  <p className="text-sm text-gray-600">Generations Strong</p>
-                </div>
+          {/* Card 2 - Why Choose Us */}
+          <div className="bg-white rounded-xl shadow-lg p-8 h-full">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Ben Davis</h2>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <span className="text-2xl">🏆</span>
+                <p className="text-gray-700">4.7-star rating • 1,480+ reviews</p>
               </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Community Commitment</h3>
-              <p className="text-gray-700 mb-4">
-                The Ben Davis Memorial Fund, managed by the Community Foundation DeKalb County, 
-                continues Ben's philanthropic legacy. We sponsor local events, support schools, 
-                and invest in Auburn's future because this community has given us everything.
-              </p>
-              
-              <div className="bg-blue-50 rounded-lg p-6 mt-4">
-                <h4 className="font-bold text-lg text-blue-900 mb-2">Awards & Recognition</h4>
-                <ul className="text-sm text-blue-800 space-y-1">
-                  <li>• DeKalb County Business Hall of Fame (2012)</li>
-                  <li>• General Motors Dealer Excellence Award</li>
-                  <li>• Ford Customer Satisfaction Excellence</li>
-                  <li>• Community Leadership Award</li>
-                </ul>
+              <div className="flex items-center space-x-3">
+                <span className="text-2xl">👨‍👩‍👧‍👦</span>
+                <p className="text-gray-700">3 generations of family service</p>
+              </div>
+              <div className="flex items-center space-x-3">
+                <span className="text-2xl">🚗</span>
+                <p className="text-gray-700">Chevrolet • Buick • Ford • RVs</p>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Values & Features */}
-          <div className="space-y-8">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Ben Davis</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🏆</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg text-gray-900">Award-Winning Service</h4>
-                    <p className="text-gray-600">4.7-star rating with over 1,480+ customer reviews. Excellence recognized by GM and Ford.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">👨‍👩‍👧‍👦</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg text-gray-900">Family Values</h4>
-                    <p className="text-gray-600">Three generations committed to treating every customer like family since 1980.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🏪</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg text-gray-900">Local Heritage</h4>
-                    <p className="text-gray-600">Born and raised in Auburn, committed to our community's automotive legacy.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🚗</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg text-gray-900">Complete Selection</h4>
-                    <p className="text-gray-600">Chevrolet, Buick, Ford, and Northern Indiana's fastest-growing RV dealership.</p>
-                  </div>
-                </div>
+          {/* Card 3 - Heritage */}
+          <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-xl shadow-lg p-8 h-full">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Auburn Heritage</h2>
+            <p className="text-gray-700 mb-4">
+              Home of the Auburn Cord Duesenberg classics since 1900. We carry on Auburn's 
+              legendary automotive tradition with modern excellence.
+            </p>
+            <div className="grid grid-cols-2 gap-4 mt-4">
+              <div className="bg-white rounded-lg p-3 text-center">
+                <p className="text-2xl font-bold text-red-800">1900</p>
+                <p className="text-xs text-gray-600">Auburn Founded</p>
+              </div>
+              <div className="bg-white rounded-lg p-3 text-center">
+                <p className="text-2xl font-bold text-red-800">1980</p>
+                <p className="text-xs text-gray-600">We Opened</p>
               </div>
             </div>
+          </div>
 
-            {/* Contact Cards */}
-            <div className="grid grid-cols-1 gap-6">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl shadow-lg p-8">
-                <h4 className="font-bold text-2xl mb-4">Visit Our Locations</h4>
-                <div className="space-y-4">
-                  <div>
-                    <p className="font-semibold text-lg">Ben Davis Chevrolet-Buick</p>
-                    <p className="opacity-90">931 W 7th St, Auburn, IN</p>
-                    <p className="opacity-90">(855) 366-5595</p>
-                  </div>
-                  <div className="border-t border-white/20 pt-4">
-                    <p className="font-semibold text-lg">Ben Davis Ford</p>
-                    <p className="opacity-90">400 S Grandstaff Dr, Auburn, IN</p>
-                    <p className="opacity-90">(855) 388-2635</p>
-                  </div>
-                  <div className="border-t border-white/20 pt-4">
-                    <p className="text-sm opacity-90">Just off I-69 at exit 329</p>
-                    <p className="text-sm opacity-90">10 minutes north of Fort Wayne</p>
-                    <p className="text-sm opacity-90 mt-2">Service Hours: Mon-Fri 8:30 AM - 6:00 PM</p>
-                  </div>
-                </div>
-              </div>
+          {/* Card 4 - Awards */}
+          <div className="bg-white rounded-xl shadow-lg p-8 h-full">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Recognition</h2>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start">
+                <span className="text-red-600 mr-2">•</span>
+                DeKalb County Business Hall of Fame
+              </li>
+              <li className="flex items-start">
+                <span className="text-red-600 mr-2">•</span>
+                GM Dealer Excellence Award
+              </li>
+              <li className="flex items-start">
+                <span className="text-red-600 mr-2">•</span>
+                Ford Customer Satisfaction Excellence
+              </li>
+              <li className="flex items-start">
+                <span className="text-red-600 mr-2">•</span>
+                Community Leadership Award
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Full Width Location Card */}
+        <div className="bg-gradient-to-r from-red-800 to-red-900 text-white rounded-xl shadow-2xl p-8">
+          <h2 className="text-3xl font-bold mb-6 text-center">Visit Ben Davis Automotive</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-bold text-xl mb-3">Ben Davis Chevrolet-Buick</h3>
+              <p className="mb-2">📍 931 W 7th St, Auburn, IN 46706</p>
+              <p className="mb-2">📞 (855) 366-5595</p>
+              <p className="text-sm opacity-90">Sales: Mon-Sat 9AM-7PM</p>
+              <p className="text-sm opacity-90">Service: Mon-Fri 8:30AM-6PM</p>
             </div>
+            <div>
+              <h3 className="font-bold text-xl mb-3">Ben Davis Ford</h3>
+              <p className="mb-2">📍 400 S Grandstaff Dr, Auburn, IN 46706</p>
+              <p className="mb-2">📞 (855) 388-2635</p>
+              <p className="text-sm opacity-90">Sales: Mon-Sat 9AM-7PM</p>
+              <p className="text-sm opacity-90">Service: Mon-Fri 8:30AM-6PM</p>
+            </div>
+          </div>
+          <div className="mt-6 pt-6 border-t border-white/20 text-center">
+            <p className="text-lg mb-2">🚗 Easy Access from I-69 Exit 329</p>
+            <p className="opacity-90">Just 10 minutes north of Fort Wayne • Free customer parking • Full service departments</p>
           </div>
         </div>
       </main>
