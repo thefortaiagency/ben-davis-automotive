@@ -1,9 +1,16 @@
 import { NextResponse } from 'next/server';
-import { cookies } from 'next/headers';
 
 export async function POST() {
-  const cookieStore = await cookies();
-  cookieStore.delete('auth-session');
+  const response = NextResponse.json({ success: true });
   
-  return NextResponse.json({ success: true });
+  // Clear the auth session cookie
+  response.cookies.set('auth-session', '', {
+    httpOnly: true,
+    secure: false,
+    sameSite: 'lax',
+    path: '/',
+    maxAge: 0 // Expire immediately
+  });
+  
+  return response;
 }

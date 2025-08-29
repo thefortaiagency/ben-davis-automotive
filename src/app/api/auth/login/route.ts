@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import bcrypt from 'bcryptjs';
-import { cookies } from 'next/headers';
 
 // Hardcoded users with hashed passwords
 // Password for both users: Ben$2025
@@ -41,26 +40,29 @@ export async function POST(request: Request) {
       );
     }
 
-    // Set session cookie
-    const cookieStore = await cookies();
-    cookieStore.set('auth-session', JSON.stringify({
-      username: user.username,
-      name: user.name,
-      loggedIn: true
-    }), {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
-      maxAge: 60 * 60 * 24 * 7 // 7 days
-    });
-
-    return NextResponse.json({
+    // Create response with session data
+    const response = NextResponse.json({
       success: true,
       user: {
         username: user.username,
         name: user.name
       }
     });
+
+    // Set session cookie on the response
+    response.cookies.set('auth-session', JSON.stringify({
+      username: user.username,
+      name: user.name,
+      loggedIn: true
+    }), {
+      httpOnly: true,
+      secure: false, // Set to false for local development
+      sameSite: 'lax',
+      path: '/',
+      maxAge: 60 * 60 * 24 * 7 // 7 days
+    });
+
+    return response;
   } catch (error) {
     console.error('Login error:', error);
     return NextResponse.json(

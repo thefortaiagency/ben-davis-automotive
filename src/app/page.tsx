@@ -100,7 +100,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
       {/* Hero Section */}
-      <section className="relative h-80 sm:h-96 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[500px] bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
         <div className="absolute inset-0 bg-black/40"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -109,25 +109,25 @@ export default function Home() {
           }}
         ></div>
         
-        <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-4">
-          <div className="max-w-4xl">
-            <div className="mb-6">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">Ben Davis Automotive</h1>
-              <p className="text-lg sm:text-xl font-light">Serving Auburn Since 1980</p>
+        <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-4 py-8">
+          <div className="max-w-4xl w-full">
+            <div className="mb-4 sm:mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2">Ben Davis Automotive</h1>
+              <p className="text-base sm:text-lg md:text-xl font-light">Serving Auburn Since 1980</p>
             </div>
             
-            <p className="text-xl sm:text-2xl mb-4 font-light">
+            <p className="text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 font-light px-2">
               "More than a dealer, we believe in making a difference"
             </p>
-            <p className="text-base sm:text-lg opacity-90 mb-6 sm:mb-8">
+            <p className="text-sm sm:text-base md:text-lg opacity-90 mb-4 sm:mb-6 md:mb-8 px-2 leading-relaxed">
               Honoring Ben Davis's legacy (1937-2014) and Auburn's automotive heritage.
-              Where classic Auburn Cord Duesenberg tradition meets modern family dealership excellence.
+              <span className="hidden sm:inline"> Where classic Auburn Cord Duesenberg tradition meets modern family dealership excellence.</span>
             </p>
             
             <div className="flex justify-center">
               <button 
                 onClick={() => router.push('/dashboard')}
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-lg"
+                className="px-6 py-2.5 sm:px-8 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-lg text-sm sm:text-base"
               >
                 Owner Dashboard →
               </button>
