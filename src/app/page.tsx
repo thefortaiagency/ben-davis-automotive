@@ -100,7 +100,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
       {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
+      <section className="relative h-80 sm:h-96 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
         <div className="absolute inset-0 bg-black/40"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -112,14 +112,14 @@ export default function Home() {
         <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-4">
           <div className="max-w-4xl">
             <div className="mb-6">
-              <h1 className="text-5xl font-bold mb-2">Ben Davis Automotive</h1>
-              <p className="text-xl font-light">Serving Auburn Since 1980</p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">Ben Davis Automotive</h1>
+              <p className="text-lg sm:text-xl font-light">Serving Auburn Since 1980</p>
             </div>
             
-            <p className="text-2xl mb-4 font-light">
+            <p className="text-xl sm:text-2xl mb-4 font-light">
               "More than a dealer, we believe in making a difference"
             </p>
-            <p className="text-lg opacity-90 mb-8">
+            <p className="text-base sm:text-lg opacity-90 mb-6 sm:mb-8">
               Honoring Ben Davis's legacy (1937-2014) and Auburn's automotive heritage.
               Where classic Auburn Cord Duesenberg tradition meets modern family dealership excellence.
             </p>
@@ -269,7 +269,7 @@ export default function Home() {
 
       {/* Floating Chatbot Panel (like dashboard) */}
       {showChatbot && (
-        <div className="fixed bottom-24 right-6 w-96 h-[600px] bg-white rounded-lg shadow-2xl flex flex-col">
+        <div className="fixed bottom-24 right-2 sm:right-6 w-[calc(100vw-1rem)] sm:w-96 max-w-96 h-[500px] sm:h-[600px] bg-white rounded-lg shadow-2xl flex flex-col">
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 rounded-t-lg">
             <div className="flex items-center space-x-3">
               <ChatbotAvatar size={50} showOnline={false} />

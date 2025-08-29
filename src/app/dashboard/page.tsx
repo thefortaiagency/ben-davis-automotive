@@ -21,6 +21,11 @@ export default function Dashboard() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
+  const handleLogout = async () => {
+    await fetch('/api/auth/logout', { method: 'POST' });
+    router.push('/login');
+  };
+
   // Dashboard metrics (would come from database in production)
   const [metrics] = useState({
     totalSales: 179,
@@ -104,27 +109,30 @@ export default function Dashboard() {
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <Image
               src="/ben-davis-logo.jpg"
               alt="Ben Davis Logo"
               width={50}
               height={50}
-              className="rounded-lg"
+              className="rounded-lg w-10 h-10 sm:w-12 sm:h-12"
             />
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Ben Davis Automotive Dashboard</h1>
-              <p className="text-sm text-gray-600">Welcome, Brent Davis</p>
+              <h1 className="text-sm sm:text-xl font-bold text-gray-900">Ben Davis Dashboard</h1>
+              <p className="text-xs sm:text-sm text-gray-600 hidden sm:block">Welcome, Brent Davis</p>
             </div>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <button 
               onClick={() => router.push('/')}
-              className="text-sm text-gray-600 hover:text-gray-900"
+              className="text-xs sm:text-sm text-gray-600 hover:text-gray-900 hidden sm:block"
             >
               Public Site
             </button>
-            <button className="px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-900 text-sm">
+            <button 
+              onClick={handleLogout}
+              className="px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-900 text-xs sm:text-sm"
+            >
               Sign Out
             </button>
           </div>
@@ -464,7 +472,7 @@ export default function Dashboard() {
 
       {/* Chatbot Panel */}
       {showChatbot && (
-        <div className="fixed bottom-24 right-6 w-96 h-[600px] bg-white rounded-lg shadow-2xl flex flex-col">
+        <div className="fixed bottom-24 right-2 sm:right-6 w-[calc(100vw-1rem)] sm:w-96 max-w-96 h-[500px] sm:h-[600px] bg-white rounded-lg shadow-2xl flex flex-col">
           <div className="bg-gradient-to-r from-blue-800 to-blue-900 text-white p-4 rounded-t-lg">
             <div className="flex items-center space-x-3">
               <ChatbotAvatar size={50} showOnline={false} />
