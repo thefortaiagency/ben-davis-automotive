@@ -391,56 +391,56 @@ export default function Dashboard() {
           <div>
             <h4 className="text-sm font-semibold text-gray-700 mb-3">Sales Team Performance</h4>
             <div className="space-y-2">
-              <div className="flex items-center justify-between p-2 bg-gray-50 rounded">
+              <div className="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3">JM</div>
+                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">JM</div>
                   <div>
-                    <p className="text-sm font-medium">Jake Miller</p>
-                    <p className="text-xs text-gray-500">Senior Sales</p>
+                    <p className="text-sm font-semibold text-gray-900">Jake Miller</p>
+                    <p className="text-xs text-gray-600">Senior Sales</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-bold">5 cars</p>
-                  <p className="text-xs text-green-600">Top Performer</p>
+                  <p className="text-lg font-bold text-gray-900">5 cars</p>
+                  <p className="text-xs font-medium text-green-600">⭐ Top Performer</p>
                 </div>
               </div>
-              <div className="flex items-center justify-between p-2 bg-gray-50 rounded">
+              <div className="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3">ST</div>
+                  <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">ST</div>
                   <div>
-                    <p className="text-sm font-medium">Sarah Thompson</p>
-                    <p className="text-xs text-gray-500">Sales Associate</p>
+                    <p className="text-sm font-semibold text-gray-900">Sarah Thompson</p>
+                    <p className="text-xs text-gray-600">Sales Associate</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-bold">3 cars</p>
-                  <p className="text-xs text-gray-600">Today</p>
+                  <p className="text-lg font-bold text-gray-900">3 cars</p>
+                  <p className="text-xs font-medium text-gray-600">Today</p>
                 </div>
               </div>
-              <div className="flex items-center justify-between p-2 bg-gray-50 rounded">
+              <div className="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3">RD</div>
+                  <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">RD</div>
                   <div>
-                    <p className="text-sm font-medium">Robert Davis</p>
-                    <p className="text-xs text-gray-500">Sales Manager</p>
+                    <p className="text-sm font-semibold text-gray-900">Robert Davis</p>
+                    <p className="text-xs text-gray-600">Sales Manager</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-bold">2 cars</p>
-                  <p className="text-xs text-gray-600">Today</p>
+                  <p className="text-lg font-bold text-gray-900">2 cars</p>
+                  <p className="text-xs font-medium text-gray-600">Today</p>
                 </div>
               </div>
-              <div className="flex items-center justify-between p-2 bg-gray-50 rounded">
+              <div className="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3">MW</div>
+                  <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">MW</div>
                   <div>
-                    <p className="text-sm font-medium">Mike Wilson</p>
-                    <p className="text-xs text-gray-500">Sales Associate</p>
+                    <p className="text-sm font-semibold text-gray-900">Mike Wilson</p>
+                    <p className="text-xs text-gray-600">Sales Associate</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-bold">2 cars</p>
-                  <p className="text-xs text-gray-600">Today</p>
+                  <p className="text-lg font-bold text-gray-900">2 cars</p>
+                  <p className="text-xs font-medium text-gray-600">Today</p>
                 </div>
               </div>
             </div>
