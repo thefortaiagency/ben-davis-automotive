@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import ChatbotAvatar from '@/components/ChatbotAvatar';
 
 interface Message {
   id: string;
@@ -16,7 +17,6 @@ export default function Dashboard() {
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [currentSpeaker, setCurrentSpeaker] = useState<'ben' | 'brent'>('ben');
-  const [avatarUrl, setAvatarUrl] = useState('/bendavis.jpg');
   const [showChatbot, setShowChatbot] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -39,17 +39,6 @@ export default function Dashboard() {
     scrollToBottom();
   }, [messages]);
 
-  useEffect(() => {
-    // Generate AI avatar on mount
-    fetch('/api/generate-avatar', { method: 'POST' })
-      .then(res => res.json())
-      .then(data => {
-        if (data.imageUrl) {
-          setAvatarUrl(data.imageUrl);
-        }
-      })
-      .catch(console.error);
-  }, []);
 
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
@@ -330,16 +319,7 @@ export default function Dashboard() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          <div className="relative">
-            <Image
-              src={avatarUrl}
-              alt="Ben Davis"
-              width={60}
-              height={60}
-              className="rounded-full border-2 border-white"
-            />
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
-          </div>
+          <ChatbotAvatar size={56} />
         )}
       </button>
 
@@ -348,13 +328,7 @@ export default function Dashboard() {
         <div className="fixed bottom-24 right-6 w-96 h-[600px] bg-white rounded-lg shadow-2xl flex flex-col">
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 rounded-t-lg">
             <div className="flex items-center space-x-3">
-              <Image
-                src={avatarUrl}
-                alt={currentSpeaker === 'ben' ? "Ben Davis" : "Brent Davis"}
-                width={50}
-                height={50}
-                className="rounded-full border-2 border-white"
-              />
+              <ChatbotAvatar size={50} showOnline={false} />
               <div>
                 <h3 className="font-bold text-lg">
                   {currentSpeaker === 'ben' ? 'Ben Davis (Founder)' : 'Brent Davis (CEO)'}

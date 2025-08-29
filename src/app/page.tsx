@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import ChatbotAvatar from '@/components/ChatbotAvatar';
 
 interface Message {
   id: string;
@@ -16,7 +17,6 @@ export default function Home() {
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [currentSpeaker, setCurrentSpeaker] = useState<'ben' | 'brent'>('ben');
-  const [avatarUrl, setAvatarUrl] = useState('/bendavis.jpg');
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
@@ -28,17 +28,6 @@ export default function Home() {
     scrollToBottom();
   }, [messages]);
 
-  useEffect(() => {
-    // Generate AI avatar on mount
-    fetch('/api/generate-avatar', { method: 'POST' })
-      .then(res => res.json())
-      .then(data => {
-        if (data.imageUrl) {
-          setAvatarUrl(data.imageUrl);
-        }
-      })
-      .catch(console.error);
-  }, []);
 
   useEffect(() => {
     // Initial greeting from Ben
@@ -211,13 +200,7 @@ export default function Home() {
           <div className="bg-white rounded-lg shadow-lg h-[600px] flex flex-col">
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 rounded-t-lg">
               <div className="flex items-center space-x-3">
-                <Image
-                  src={avatarUrl}
-                  alt={currentSpeaker === 'ben' ? "Ben Davis" : "Brent Davis"}
-                  width={50}
-                  height={50}
-                  className="rounded-full border-2 border-white object-cover"
-                />
+                <ChatbotAvatar size={50} showOnline={false} />
                 <div>
                   <h3 className="font-bold text-lg">
                     Chat with {currentSpeaker === 'ben' ? 'Ben Davis (Founder)' : 'Brent Davis (CEO)'}
