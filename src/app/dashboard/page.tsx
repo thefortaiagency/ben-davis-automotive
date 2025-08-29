@@ -230,8 +230,33 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Sales Trend</h3>
-            <div className="h-64 bg-gray-50 rounded flex items-center justify-center">
-              <p className="text-gray-500">Sales chart would go here</p>
+            <div className="h-64 bg-gray-50 rounded p-4">
+              <div className="flex items-end justify-between h-full">
+                <div className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div className="w-8 bg-blue-400 rounded-t" style={{height: '45%'}}></div>
+                  <span className="text-xs mt-1">Jan</span>
+                </div>
+                <div className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div className="w-8 bg-blue-400 rounded-t" style={{height: '55%'}}></div>
+                  <span className="text-xs mt-1">Feb</span>
+                </div>
+                <div className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div className="w-8 bg-blue-400 rounded-t" style={{height: '65%'}}></div>
+                  <span className="text-xs mt-1">Mar</span>
+                </div>
+                <div className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div className="w-8 bg-blue-400 rounded-t" style={{height: '70%'}}></div>
+                  <span className="text-xs mt-1">Apr</span>
+                </div>
+                <div className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div className="w-8 bg-blue-400 rounded-t" style={{height: '75%'}}></div>
+                  <span className="text-xs mt-1">May</span>
+                </div>
+                <div className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div className="w-8 bg-blue-500 rounded-t" style={{height: '85%'}}></div>
+                  <span className="text-xs mt-1 font-bold">Jun</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -314,41 +339,50 @@ export default function Dashboard() {
           {/* Daily Sales Chart */}
           <div className="mb-6">
             <h4 className="text-sm font-semibold text-gray-700 mb-3">Daily Sales This Week</h4>
-            <div className="flex items-end justify-between h-32 px-2">
-              <div className="flex flex-col items-center flex-1">
-                <div className="bg-blue-700 rounded-t" style={{height: '60%', width: '80%'}}></div>
-                <span className="text-xs mt-1">Mon</span>
-                <span className="text-xs font-bold">8</span>
-              </div>
-              <div className="flex flex-col items-center flex-1">
-                <div className="bg-blue-700 rounded-t" style={{height: '80%', width: '80%'}}></div>
-                <span className="text-xs mt-1">Tue</span>
-                <span className="text-xs font-bold">11</span>
-              </div>
-              <div className="flex flex-col items-center flex-1">
-                <div className="bg-blue-700 rounded-t" style={{height: '70%', width: '80%'}}></div>
-                <span className="text-xs mt-1">Wed</span>
-                <span className="text-xs font-bold">9</span>
-              </div>
-              <div className="flex flex-col items-center flex-1">
-                <div className="bg-blue-700 rounded-t" style={{height: '100%', width: '80%'}}></div>
-                <span className="text-xs mt-1">Thu</span>
-                <span className="text-xs font-bold">15</span>
-              </div>
-              <div className="flex flex-col items-center flex-1">
-                <div className="bg-blue-800 rounded-t" style={{height: '90%', width: '80%'}}></div>
-                <span className="text-xs mt-1 font-bold">Today</span>
-                <span className="text-xs font-bold">12</span>
-              </div>
-              <div className="flex flex-col items-center flex-1 opacity-50">
-                <div className="bg-gray-300 rounded-t" style={{height: '40%', width: '80%'}}></div>
-                <span className="text-xs mt-1">Sat</span>
-                <span className="text-xs">-</span>
-              </div>
-              <div className="flex flex-col items-center flex-1 opacity-50">
-                <div className="bg-gray-300 rounded-t" style={{height: '40%', width: '80%'}}></div>
-                <span className="text-xs mt-1">Sun</span>
-                <span className="text-xs">-</span>
+            <div className="bg-gray-50 rounded-lg p-4">
+              <div className="flex items-end justify-between h-32 space-x-2">
+                <div className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div className="w-full bg-blue-500 rounded-t relative" style={{height: '60%'}}>
+                    <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs font-bold">8</span>
+                  </div>
+                  <span className="text-xs mt-1">Mon</span>
+                </div>
+                <div className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div className="w-full bg-blue-500 rounded-t relative" style={{height: '80%'}}>
+                    <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs font-bold">11</span>
+                  </div>
+                  <span className="text-xs mt-1">Tue</span>
+                </div>
+                <div className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div className="w-full bg-blue-500 rounded-t relative" style={{height: '70%'}}>
+                    <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs font-bold">9</span>
+                  </div>
+                  <span className="text-xs mt-1">Wed</span>
+                </div>
+                <div className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div className="w-full bg-blue-500 rounded-t relative" style={{height: '100%'}}>
+                    <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs font-bold">15</span>
+                  </div>
+                  <span className="text-xs mt-1">Thu</span>
+                </div>
+                <div className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div className="w-full bg-blue-600 rounded-t relative" style={{height: '90%'}}>
+                    <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs font-bold text-blue-600">12</span>
+                  </div>
+                  <span className="text-xs mt-1 font-bold">Today</span>
+                </div>
+                <div className="flex flex-col items-center justify-end flex-1 h-full opacity-50">
+                  <div className="w-full bg-gray-300 rounded-t relative" style={{height: '20%'}}>
+                    <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs">-</span>
+                  </div>
+                  <span className="text-xs mt-1">Sat</span>
+                </div>
+                <div className="flex flex-col items-center justify-end flex-1 h-full opacity-50">
+                  <div className="w-full bg-gray-300 rounded-t relative" style={{height: '20%'}}>
+                    <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs">-</span>
+                  </div>
+                  <span className="text-xs mt-1">Sun</span>
+                </div>
               </div>
             </div>
           </div>
