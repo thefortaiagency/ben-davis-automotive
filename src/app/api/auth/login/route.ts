@@ -50,13 +50,18 @@ export async function POST(request: Request) {
     });
 
     // Set session cookie on the response
-    response.cookies.set('auth-session', JSON.stringify({
+    // Using compatible settings for both mobile and desktop browsers
+    const sessionData = JSON.stringify({
       username: user.username,
       name: user.name,
       loggedIn: true
-    }), {
+    });
+    
+    response.cookies.set({
+      name: 'auth-session',
+      value: sessionData,
       httpOnly: true,
-      secure: false, // Set to false for local development
+      secure: false, // Must be false for localhost
       sameSite: 'lax',
       path: '/',
       maxAge: 60 * 60 * 24 * 7 // 7 days

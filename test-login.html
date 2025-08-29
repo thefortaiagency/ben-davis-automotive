@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Ben Davis Login</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f3f4f6;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        .credentials {
+            background: #eff6ff;
+            border: 2px solid #3b82f6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .cred-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 4px;
+        }
+        .username {
+            font-weight: bold;
+            color: #1e40af;
+        }
+        .password {
+            color: #059669;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button {
+            flex: 1;
+            padding: 12px 20px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        .test-btn {
+            background: #10b981;
+        }
+        .test-btn:hover {
+            background: #059669;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        .result.success {
+            background: #d1fae5;
+            border: 1px solid #10b981;
+            color: #065f46;
+            display: block;
+        }
+        .result.error {
+            background: #fee2e2;
+            border: 1px solid #ef4444;
+            color: #991b1b;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Ben Davis Login Test</h1>
+        <p>Test the authentication system with these credentials:</p>
+        
+        <div class="credentials">
+            <h3>Available Users:</h3>
+            <div class="cred-item">
+                <div class="username">Username: aoberlin</div>
+                <div class="password">Password: Ben$2025</div>
+                <small>Andy Oberlin - Owner</small>
+            </div>
+            <div class="cred-item">
+                <div class="username">Username: bdavis</div>
+                <div class="password">Password: Ben$2025</div>
+                <small>Brent Davis - CEO</small>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button onclick="window.open('http://localhost:3005/login', '_blank')">
+                Open Login Page
+            </button>
+            <button onclick="window.open('http://localhost:3005/dashboard', '_blank')">
+                Try Dashboard (Protected)
+            </button>
+        </div>
+
+        <div class="btn-group">
+            <button class="test-btn" onclick="testLogin('aoberlin')">
+                Test aoberlin Login via API
+            </button>
+            <button class="test-btn" onclick="testLogin('bdavis')">
+                Test bdavis Login via API
+            </button>
+        </div>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        async function testLogin(username) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.className = 'result';
+            resultDiv.textContent = 'Testing login...';
+            
+            try {
+                const response = await fetch('http://localhost:3005/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    credentials: 'include', // Important for cookies
+                    body: JSON.stringify({
+                        username: username,
+                        password: 'Ben$2025'
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (response.ok && data.success) {
+                    resultDiv.className = 'result success';
+                    resultDiv.innerHTML = `
+                        ✅ Login successful!<br>
+                        User: ${data.user.name} (${data.user.username})<br>
+                        <br>
+                        Now try opening the <a href="http://localhost:3005/dashboard" target="_blank">dashboard</a> - you should be logged in!
+                    `;
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.textContent = `❌ Login failed: ${data.error || 'Unknown error'}`;
+                }
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.textContent = `❌ Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>

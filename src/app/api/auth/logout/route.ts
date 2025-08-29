@@ -4,7 +4,9 @@ export async function POST() {
   const response = NextResponse.json({ success: true });
   
   // Clear the auth session cookie
-  response.cookies.set('auth-session', '', {
+  response.cookies.set({
+    name: 'auth-session',
+    value: '',
     httpOnly: true,
     secure: false,
     sameSite: 'lax',
