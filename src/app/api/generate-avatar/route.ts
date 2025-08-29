@@ -17,8 +17,10 @@ export async function POST(request: Request) {
       style: "natural"
     });
 
+    const imageUrl = response.data?.[0]?.url || '/bendavis.jpg';
+    
     return NextResponse.json({
-      imageUrl: response.data[0].url
+      imageUrl
     });
   } catch (error) {
     console.error('Avatar generation error:', error);
