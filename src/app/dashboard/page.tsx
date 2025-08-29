@@ -274,37 +274,137 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Quick Actions */}
+        {/* Sales Performance */}
         <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <button className="p-4 border rounded-lg hover:bg-gray-50 text-center">
-              <svg className="w-8 h-8 text-gray-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-              <p className="text-sm text-gray-900">Add Inventory</p>
-            </button>
-            
-            <button className="p-4 border rounded-lg hover:bg-gray-50 text-center">
-              <svg className="w-8 h-8 text-gray-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-              <p className="text-sm text-gray-900">View Customers</p>
-            </button>
-            
-            <button className="p-4 border rounded-lg hover:bg-gray-50 text-center">
-              <svg className="w-8 h-8 text-gray-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-              </svg>
-              <p className="text-sm text-gray-900">Service Schedule</p>
-            </button>
-            
-            <button className="p-4 border rounded-lg hover:bg-gray-50 text-center">
-              <svg className="w-8 h-8 text-gray-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-              <p className="text-sm text-gray-900">Reports</p>
-            </button>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Sales Performance</h3>
+          
+          {/* Today and Week Stats */}
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="bg-blue-50 rounded-lg p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm text-gray-600">Cars Sold Today</p>
+                  <p className="text-3xl font-bold text-blue-900">12</p>
+                  <p className="text-xs text-green-600 mt-1">+20% vs yesterday</p>
+                </div>
+                <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
+                </svg>
+              </div>
+            </div>
+            <div className="bg-green-50 rounded-lg p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm text-gray-600">Cars Sold This Week</p>
+                  <p className="text-3xl font-bold text-green-900">67</p>
+                  <p className="text-xs text-green-600 mt-1">+15% vs last week</p>
+                </div>
+                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Daily Sales Chart */}
+          <div className="mb-6">
+            <h4 className="text-sm font-semibold text-gray-700 mb-3">Daily Sales This Week</h4>
+            <div className="flex items-end justify-between h-32 px-2">
+              <div className="flex flex-col items-center flex-1">
+                <div className="bg-blue-500 rounded-t" style={{height: '60%', width: '80%'}}></div>
+                <span className="text-xs mt-1">Mon</span>
+                <span className="text-xs font-bold">8</span>
+              </div>
+              <div className="flex flex-col items-center flex-1">
+                <div className="bg-blue-500 rounded-t" style={{height: '80%', width: '80%'}}></div>
+                <span className="text-xs mt-1">Tue</span>
+                <span className="text-xs font-bold">11</span>
+              </div>
+              <div className="flex flex-col items-center flex-1">
+                <div className="bg-blue-500 rounded-t" style={{height: '70%', width: '80%'}}></div>
+                <span className="text-xs mt-1">Wed</span>
+                <span className="text-xs font-bold">9</span>
+              </div>
+              <div className="flex flex-col items-center flex-1">
+                <div className="bg-blue-500 rounded-t" style={{height: '100%', width: '80%'}}></div>
+                <span className="text-xs mt-1">Thu</span>
+                <span className="text-xs font-bold">15</span>
+              </div>
+              <div className="flex flex-col items-center flex-1">
+                <div className="bg-blue-600 rounded-t" style={{height: '90%', width: '80%'}}></div>
+                <span className="text-xs mt-1 font-bold">Today</span>
+                <span className="text-xs font-bold">12</span>
+              </div>
+              <div className="flex flex-col items-center flex-1 opacity-50">
+                <div className="bg-gray-300 rounded-t" style={{height: '40%', width: '80%'}}></div>
+                <span className="text-xs mt-1">Sat</span>
+                <span className="text-xs">-</span>
+              </div>
+              <div className="flex flex-col items-center flex-1 opacity-50">
+                <div className="bg-gray-300 rounded-t" style={{height: '40%', width: '80%'}}></div>
+                <span className="text-xs mt-1">Sun</span>
+                <span className="text-xs">-</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Sales Team Stats */}
+          <div>
+            <h4 className="text-sm font-semibold text-gray-700 mb-3">Sales Team Performance</h4>
+            <div className="space-y-2">
+              <div className="flex items-center justify-between p-2 bg-gray-50 rounded">
+                <div className="flex items-center">
+                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3">JM</div>
+                  <div>
+                    <p className="text-sm font-medium">Jake Miller</p>
+                    <p className="text-xs text-gray-500">Senior Sales</p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="text-sm font-bold">5 cars</p>
+                  <p className="text-xs text-green-600">Top Performer</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between p-2 bg-gray-50 rounded">
+                <div className="flex items-center">
+                  <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3">ST</div>
+                  <div>
+                    <p className="text-sm font-medium">Sarah Thompson</p>
+                    <p className="text-xs text-gray-500">Sales Associate</p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="text-sm font-bold">3 cars</p>
+                  <p className="text-xs text-gray-600">Today</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between p-2 bg-gray-50 rounded">
+                <div className="flex items-center">
+                  <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3">RD</div>
+                  <div>
+                    <p className="text-sm font-medium">Robert Davis</p>
+                    <p className="text-xs text-gray-500">Sales Manager</p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="text-sm font-bold">2 cars</p>
+                  <p className="text-xs text-gray-600">Today</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between p-2 bg-gray-50 rounded">
+                <div className="flex items-center">
+                  <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3">MW</div>
+                  <div>
+                    <p className="text-sm font-medium">Mike Wilson</p>
+                    <p className="text-xs text-gray-500">Sales Associate</p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="text-sm font-bold">2 cars</p>
+                  <p className="text-xs text-gray-600">Today</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -339,6 +439,104 @@ export default function Dashboard() {
           </div>
 
           <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+            {/* Quick Question Cards - Only show when no messages */}
+            {messages.length === 0 && (
+              <div className="space-y-3">
+                <p className="text-xs text-gray-500 uppercase tracking-wide font-medium">Quick Questions</p>
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => {
+                      setInputValue("Who's the top sales person this month?");
+                      handleSendMessage();
+                    }}
+                    className="p-3 bg-white border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-sm transition-all text-left"
+                  >
+                    <svg className="w-5 h-5 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p className="text-xs font-medium text-gray-900">Top Sales Person</p>
+                    <p className="text-xs text-gray-500">This month</p>
+                  </button>
+                  
+                  <button
+                    onClick={() => {
+                      setInputValue("What's our best selling vehicle model?");
+                      handleSendMessage();
+                    }}
+                    className="p-3 bg-white border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-sm transition-all text-left"
+                  >
+                    <svg className="w-5 h-5 text-green-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                    <p className="text-xs font-medium text-gray-900">Best Seller</p>
+                    <p className="text-xs text-gray-500">#1 Vehicle</p>
+                  </button>
+                  
+                  <button
+                    onClick={() => {
+                      setInputValue("Which vehicle had the highest profit margin?");
+                      handleSendMessage();
+                    }}
+                    className="p-3 bg-white border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-sm transition-all text-left"
+                  >
+                    <svg className="w-5 h-5 text-purple-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p className="text-xs font-medium text-gray-900">Best Margin</p>
+                    <p className="text-xs text-gray-500">Highest profit</p>
+                  </button>
+                  
+                  <button
+                    onClick={() => {
+                      setInputValue("What's our customer satisfaction rating?");
+                      handleSendMessage();
+                    }}
+                    className="p-3 bg-white border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-sm transition-all text-left"
+                  >
+                    <svg className="w-5 h-5 text-yellow-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                    </svg>
+                    <p className="text-xs font-medium text-gray-900">Satisfaction</p>
+                    <p className="text-xs text-gray-500">Customer rating</p>
+                  </button>
+                  
+                  <button
+                    onClick={() => {
+                      setInputValue("Show me year-over-year sales comparison");
+                      handleSendMessage();
+                    }}
+                    className="p-3 bg-white border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-sm transition-all text-left"
+                  >
+                    <svg className="w-5 h-5 text-orange-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                    </svg>
+                    <p className="text-xs font-medium text-gray-900">YoY Sales</p>
+                    <p className="text-xs text-gray-500">Annual trend</p>
+                  </button>
+                  
+                  <button
+                    onClick={() => {
+                      setInputValue("What's our current inventory turnover rate?");
+                      handleSendMessage();
+                    }}
+                    className="p-3 bg-white border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-sm transition-all text-left"
+                  >
+                    <svg className="w-5 h-5 text-red-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                    <p className="text-xs font-medium text-gray-900">Turnover Rate</p>
+                    <p className="text-xs text-gray-500">Inventory</p>
+                  </button>
+                </div>
+                
+                <div className="mt-3 p-3 bg-blue-50 rounded-lg">
+                  <p className="text-xs text-blue-900 font-medium mb-1">💡 Pro Tip</p>
+                  <p className="text-xs text-blue-700">Ask me anything about sales, inventory, customers, or financial performance!</p>
+                </div>
+              </div>
+            )}
+            
+            {/* Message History */}
             {messages.map((message) => (
               <div
                 key={message.id}
