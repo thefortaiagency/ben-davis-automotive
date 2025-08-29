@@ -159,8 +159,8 @@ export default function Home() {
               Founded by Ben Davis (1937-2014), we've served Auburn and Northeast Indiana since 1980. 
               Three generations of the Davis family continue the tradition of treating every customer like family.
             </p>
-            <div className="bg-red-50 rounded-lg p-4 mt-4">
-              <p className="text-3xl font-bold text-red-800">44+</p>
+            <div className="bg-blue-50 rounded-lg p-4 mt-4">
+              <p className="text-3xl font-bold text-blue-800">44+</p>
               <p className="text-sm text-gray-600">Years of Service</p>
             </div>
           </div>
@@ -185,7 +185,7 @@ export default function Home() {
           </div>
 
           {/* Card 3 - Heritage */}
-          <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-xl shadow-lg p-8 h-full">
+          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl shadow-lg p-8 h-full">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Auburn Heritage</h2>
             <p className="text-gray-700 mb-4">
               Home of the Auburn Cord Duesenberg classics since 1900. We carry on Auburn's 
@@ -193,11 +193,11 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-2 gap-4 mt-4">
               <div className="bg-white rounded-lg p-3 text-center">
-                <p className="text-2xl font-bold text-red-800">1900</p>
+                <p className="text-2xl font-bold text-blue-800">1900</p>
                 <p className="text-xs text-gray-600">Auburn Founded</p>
               </div>
               <div className="bg-white rounded-lg p-3 text-center">
-                <p className="text-2xl font-bold text-red-800">1980</p>
+                <p className="text-2xl font-bold text-blue-800">1980</p>
                 <p className="text-xs text-gray-600">We Opened</p>
               </div>
             </div>
@@ -208,19 +208,19 @@ export default function Home() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Recognition</h2>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start">
-                <span className="text-red-600 mr-2">•</span>
+                <span className="text-blue-600 mr-2">•</span>
                 DeKalb County Business Hall of Fame
               </li>
               <li className="flex items-start">
-                <span className="text-red-600 mr-2">•</span>
+                <span className="text-blue-600 mr-2">•</span>
                 GM Dealer Excellence Award
               </li>
               <li className="flex items-start">
-                <span className="text-red-600 mr-2">•</span>
+                <span className="text-blue-600 mr-2">•</span>
                 Ford Customer Satisfaction Excellence
               </li>
               <li className="flex items-start">
-                <span className="text-red-600 mr-2">•</span>
+                <span className="text-blue-600 mr-2">•</span>
                 Community Leadership Award
               </li>
             </ul>
@@ -228,7 +228,7 @@ export default function Home() {
         </div>
 
         {/* Full Width Location Card */}
-        <div className="bg-gradient-to-r from-red-800 to-red-900 text-white rounded-xl shadow-2xl p-8">
+        <div className="bg-gradient-to-r from-blue-800 to-blue-900 text-white rounded-xl shadow-2xl p-8">
           <h2 className="text-3xl font-bold mb-6 text-center">Visit Ben Davis Automotive</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
