@@ -313,31 +313,31 @@ export default function Dashboard() {
         </div>
 
         {/* Sales Performance */}
-        <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Sales Performance</h3>
+        <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-3 sm:p-4 lg:p-6">
+          <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Sales Performance</h3>
           
           {/* Today and Week Stats */}
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            <div className="bg-blue-50 rounded-lg p-4">
-              <div className="flex items-center justify-between">
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:gap-4 mb-4 sm:mb-6">
+            <div className="bg-blue-50 rounded-lg p-2 sm:p-3 lg:p-4">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-sm text-gray-600">Cars Sold Today</p>
-                  <p className="text-3xl font-bold text-blue-900">12</p>
-                  <p className="text-xs text-green-600 mt-1">+20% vs yesterday</p>
+                  <p className="text-xs sm:text-sm text-gray-600">Cars Sold Today</p>
+                  <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-900">12</p>
+                  <p className="text-xs text-green-600 mt-1 hidden sm:block">+20% vs yesterday</p>
                 </div>
-                <svg className="w-10 h-10 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-blue-800 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
                 </svg>
               </div>
             </div>
-            <div className="bg-green-50 rounded-lg p-4">
-              <div className="flex items-center justify-between">
+            <div className="bg-green-50 rounded-lg p-2 sm:p-3 lg:p-4">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-sm text-gray-600">Cars Sold This Week</p>
-                  <p className="text-3xl font-bold text-green-900">67</p>
-                  <p className="text-xs text-green-600 mt-1">+15% vs last week</p>
+                  <p className="text-xs sm:text-sm text-gray-600">Cars Sold This Week</p>
+                  <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-900">67</p>
+                  <p className="text-xs text-green-600 mt-1 hidden sm:block">+15% vs last week</p>
                 </div>
-                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-green-600 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
@@ -345,51 +345,58 @@ export default function Dashboard() {
           </div>
 
           {/* Daily Sales Chart */}
-          <div className="mb-6">
-            <h4 className="text-sm font-semibold text-gray-700 mb-3">Daily Sales This Week</h4>
-            <div className="bg-gray-50 rounded-lg p-4">
-              <div className="flex items-end justify-between h-32 space-x-2">
+          <div className="mb-4 sm:mb-6">
+            <h4 className="text-xs sm:text-sm font-semibold text-gray-700 mb-2 sm:mb-3">Daily Sales This Week</h4>
+            <div className="bg-gray-50 rounded-lg p-2 sm:p-3 lg:p-4 overflow-x-auto">
+              <div className="flex items-end justify-between h-24 sm:h-32 space-x-1 sm:space-x-2 min-w-[280px]">
                 <div className="flex flex-col items-center justify-end flex-1 h-full">
                   <div className="w-full bg-blue-500 rounded-t relative" style={{height: '60%'}}>
                     <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs font-bold">8</span>
                   </div>
-                  <span className="text-xs mt-1">Mon</span>
+                  <span className="text-xs mt-1 hidden sm:block">Mon</span>
+                  <span className="text-xs mt-1 sm:hidden">M</span>
                 </div>
                 <div className="flex flex-col items-center justify-end flex-1 h-full">
                   <div className="w-full bg-blue-500 rounded-t relative" style={{height: '80%'}}>
                     <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs font-bold">11</span>
                   </div>
-                  <span className="text-xs mt-1">Tue</span>
+                  <span className="text-xs mt-1 hidden sm:block">Tue</span>
+                  <span className="text-xs mt-1 sm:hidden">T</span>
                 </div>
                 <div className="flex flex-col items-center justify-end flex-1 h-full">
                   <div className="w-full bg-blue-500 rounded-t relative" style={{height: '70%'}}>
                     <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs font-bold">9</span>
                   </div>
-                  <span className="text-xs mt-1">Wed</span>
+                  <span className="text-xs mt-1 hidden sm:block">Wed</span>
+                  <span className="text-xs mt-1 sm:hidden">W</span>
                 </div>
                 <div className="flex flex-col items-center justify-end flex-1 h-full">
                   <div className="w-full bg-blue-500 rounded-t relative" style={{height: '100%'}}>
                     <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs font-bold">15</span>
                   </div>
-                  <span className="text-xs mt-1">Thu</span>
+                  <span className="text-xs mt-1 hidden sm:block">Thu</span>
+                  <span className="text-xs mt-1 sm:hidden">T</span>
                 </div>
                 <div className="flex flex-col items-center justify-end flex-1 h-full">
                   <div className="w-full bg-blue-600 rounded-t relative" style={{height: '90%'}}>
                     <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs font-bold text-blue-600">12</span>
                   </div>
-                  <span className="text-xs mt-1 font-bold">Today</span>
+                  <span className="text-xs mt-1 font-bold hidden sm:block">Today</span>
+                  <span className="text-xs mt-1 font-bold sm:hidden">F</span>
                 </div>
                 <div className="flex flex-col items-center justify-end flex-1 h-full opacity-50">
                   <div className="w-full bg-gray-300 rounded-t relative" style={{height: '20%'}}>
                     <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs">-</span>
                   </div>
-                  <span className="text-xs mt-1">Sat</span>
+                  <span className="text-xs mt-1 hidden sm:block">Sat</span>
+                  <span className="text-xs mt-1 sm:hidden">S</span>
                 </div>
                 <div className="flex flex-col items-center justify-end flex-1 h-full opacity-50">
                   <div className="w-full bg-gray-300 rounded-t relative" style={{height: '20%'}}>
                     <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-xs">-</span>
                   </div>
-                  <span className="text-xs mt-1">Sun</span>
+                  <span className="text-xs mt-1 hidden sm:block">Sun</span>
+                  <span className="text-xs mt-1 sm:hidden">S</span>
                 </div>
               </div>
             </div>
@@ -397,57 +404,57 @@ export default function Dashboard() {
 
           {/* Sales Team Stats */}
           <div>
-            <h4 className="text-sm font-semibold text-gray-700 mb-3">Sales Team Performance</h4>
+            <h4 className="text-xs sm:text-sm font-semibold text-gray-700 mb-2 sm:mb-3">Sales Team Performance</h4>
             <div className="space-y-2">
-              <div className="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
+              <div className="flex items-center justify-between p-2 sm:p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">JM</div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold mr-2 sm:mr-3">JM</div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">Jake Miller</p>
-                    <p className="text-xs text-gray-600">Senior Sales</p>
+                    <p className="text-xs sm:text-sm font-semibold text-gray-900">Jake Miller</p>
+                    <p className="text-xs text-gray-600 hidden sm:block">Senior Sales</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-bold text-gray-900">5 cars</p>
-                  <p className="text-xs font-medium text-green-600">⭐ Top Performer</p>
+                  <p className="text-base sm:text-lg font-bold text-gray-900">5 cars</p>
+                  <p className="text-xs font-medium text-green-600">⭐ Top</p>
                 </div>
               </div>
-              <div className="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
+              <div className="flex items-center justify-between p-2 sm:p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">ST</div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-600 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold mr-2 sm:mr-3">ST</div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">Sarah Thompson</p>
-                    <p className="text-xs text-gray-600">Sales Associate</p>
+                    <p className="text-xs sm:text-sm font-semibold text-gray-900">Sarah Thompson</p>
+                    <p className="text-xs text-gray-600 hidden sm:block">Sales Associate</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-bold text-gray-900">3 cars</p>
+                  <p className="text-base sm:text-lg font-bold text-gray-900">3 cars</p>
                   <p className="text-xs font-medium text-gray-600">Today</p>
                 </div>
               </div>
-              <div className="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
+              <div className="flex items-center justify-between p-2 sm:p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">RD</div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-purple-600 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold mr-2 sm:mr-3">RD</div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">Robert Davis</p>
-                    <p className="text-xs text-gray-600">Sales Manager</p>
+                    <p className="text-xs sm:text-sm font-semibold text-gray-900">Robert Davis</p>
+                    <p className="text-xs text-gray-600 hidden sm:block">Sales Manager</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-bold text-gray-900">2 cars</p>
+                  <p className="text-base sm:text-lg font-bold text-gray-900">2 cars</p>
                   <p className="text-xs font-medium text-gray-600">Today</p>
                 </div>
               </div>
-              <div className="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
+              <div className="flex items-center justify-between p-2 sm:p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">MW</div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-orange-600 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold mr-2 sm:mr-3">MW</div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">Mike Wilson</p>
-                    <p className="text-xs text-gray-600">Sales Associate</p>
+                    <p className="text-xs sm:text-sm font-semibold text-gray-900">Mike Wilson</p>
+                    <p className="text-xs text-gray-600 hidden sm:block">Sales Associate</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-bold text-gray-900">2 cars</p>
+                  <p className="text-base sm:text-lg font-bold text-gray-900">2 cars</p>
                   <p className="text-xs font-medium text-gray-600">Today</p>
                 </div>
               </div>
@@ -459,7 +466,7 @@ export default function Dashboard() {
       {/* Floating Chatbot Button */}
       <button
         onClick={() => setShowChatbot(!showChatbot)}
-        className="fixed bottom-6 right-6 w-16 h-16 bg-blue-800 rounded-full shadow-lg hover:bg-blue-900 flex items-center justify-center transition-all"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-14 h-14 sm:w-16 sm:h-16 bg-blue-800 rounded-full shadow-lg hover:bg-blue-900 flex items-center justify-center transition-all z-50"
       >
         {showChatbot ? (
           <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

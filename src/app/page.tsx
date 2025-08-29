@@ -153,60 +153,60 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           
           {/* Card 1 - Our Legacy */}
-          <div className="bg-white rounded-xl shadow-lg p-8 h-full">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Auburn Legacy</h2>
-            <p className="text-gray-700 mb-4">
+          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 h-full">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Our Auburn Legacy</h2>
+            <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">
               Founded by Ben Davis (1937-2014), we've served Auburn and Northeast Indiana since 1980. 
               Three generations of the Davis family continue the tradition of treating every customer like family.
             </p>
-            <div className="bg-blue-50 rounded-lg p-4 mt-4">
-              <p className="text-3xl font-bold text-blue-800">44+</p>
-              <p className="text-sm text-gray-600">Years of Service</p>
+            <div className="bg-blue-50 rounded-lg p-3 sm:p-4 mt-3 sm:mt-4">
+              <p className="text-2xl sm:text-3xl font-bold text-blue-800">44+</p>
+              <p className="text-xs sm:text-sm text-gray-600">Years of Service</p>
             </div>
           </div>
 
           {/* Card 2 - Why Choose Us */}
-          <div className="bg-white rounded-xl shadow-lg p-8 h-full">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Ben Davis</h2>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">🏆</span>
-                <p className="text-gray-700">4.7-star rating • 1,480+ reviews</p>
+          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 h-full">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Why Choose Ben Davis</h2>
+            <div className="space-y-2 sm:space-y-3">
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <span className="text-xl sm:text-2xl flex-shrink-0">🏆</span>
+                <p className="text-sm sm:text-base text-gray-700">4.7-star rating • 1,480+ reviews</p>
               </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">👨‍👩‍👧‍👦</span>
-                <p className="text-gray-700">3 generations of family service</p>
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <span className="text-xl sm:text-2xl flex-shrink-0">👨‍👩‍👧‍👦</span>
+                <p className="text-sm sm:text-base text-gray-700">3 generations of family service</p>
               </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-2xl">🚗</span>
-                <p className="text-gray-700">Chevrolet • Buick • Ford • RVs</p>
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <span className="text-xl sm:text-2xl flex-shrink-0">🚗</span>
+                <p className="text-sm sm:text-base text-gray-700">Chevrolet • Buick • Ford • RVs</p>
               </div>
             </div>
           </div>
 
           {/* Card 3 - Heritage */}
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl shadow-lg p-8 h-full">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Auburn Heritage</h2>
-            <p className="text-gray-700 mb-4">
+          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 h-full">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Auburn Heritage</h2>
+            <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">
               Home of the Auburn Cord Duesenberg classics since 1900. We carry on Auburn's 
               legendary automotive tradition with modern excellence.
             </p>
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              <div className="bg-white rounded-lg p-3 text-center">
-                <p className="text-2xl font-bold text-blue-800">1900</p>
+            <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-3 sm:mt-4">
+              <div className="bg-white rounded-lg p-2 sm:p-3 text-center">
+                <p className="text-lg sm:text-2xl font-bold text-blue-800">1900</p>
                 <p className="text-xs text-gray-600">Auburn Founded</p>
               </div>
-              <div className="bg-white rounded-lg p-3 text-center">
-                <p className="text-2xl font-bold text-blue-800">1980</p>
+              <div className="bg-white rounded-lg p-2 sm:p-3 text-center">
+                <p className="text-lg sm:text-2xl font-bold text-blue-800">1980</p>
                 <p className="text-xs text-gray-600">We Opened</p>
               </div>
             </div>
           </div>
 
           {/* Card 4 - Awards */}
-          <div className="bg-white rounded-xl shadow-lg p-8 h-full">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Recognition</h2>
-            <ul className="space-y-2 text-gray-700">
+          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 h-full">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Recognition</h2>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-700">
               <li className="flex items-start">
                 <span className="text-blue-600 mr-2">•</span>
                 DeKalb County Business Hall of Fame
@@ -228,27 +228,27 @@ export default function Home() {
         </div>
 
         {/* Full Width Location Card */}
-        <div className="bg-gradient-to-r from-blue-800 to-blue-900 text-white rounded-xl shadow-2xl p-8">
-          <h2 className="text-3xl font-bold mb-6 text-center">Visit Ben Davis Automotive</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="bg-gradient-to-r from-blue-800 to-blue-900 text-white rounded-xl shadow-2xl p-4 sm:p-6 lg:p-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center">Visit Ben Davis Automotive</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             <div>
-              <h3 className="font-bold text-xl mb-3">Ben Davis Chevrolet-Buick</h3>
-              <p className="mb-2">📍 931 W 7th St, Auburn, IN 46706</p>
-              <p className="mb-2">📞 (855) 366-5595</p>
-              <p className="text-sm opacity-90">Sales: Mon-Sat 9AM-7PM</p>
-              <p className="text-sm opacity-90">Service: Mon-Fri 8:30AM-6PM</p>
+              <h3 className="font-bold text-lg sm:text-xl mb-2 sm:mb-3">Ben Davis Chevrolet-Buick</h3>
+              <p className="mb-1 sm:mb-2 text-sm sm:text-base">📍 931 W 7th St, Auburn, IN 46706</p>
+              <p className="mb-1 sm:mb-2 text-sm sm:text-base">📞 (855) 366-5595</p>
+              <p className="text-xs sm:text-sm opacity-90">Sales: Mon-Sat 9AM-7PM</p>
+              <p className="text-xs sm:text-sm opacity-90">Service: Mon-Fri 8:30AM-6PM</p>
             </div>
-            <div>
-              <h3 className="font-bold text-xl mb-3">Ben Davis Ford</h3>
-              <p className="mb-2">📍 400 S Grandstaff Dr, Auburn, IN 46706</p>
-              <p className="mb-2">📞 (855) 388-2635</p>
-              <p className="text-sm opacity-90">Sales: Mon-Sat 9AM-7PM</p>
-              <p className="text-sm opacity-90">Service: Mon-Fri 8:30AM-6PM</p>
+            <div className="mt-4 md:mt-0">
+              <h3 className="font-bold text-lg sm:text-xl mb-2 sm:mb-3">Ben Davis Ford</h3>
+              <p className="mb-1 sm:mb-2 text-sm sm:text-base">📍 400 S Grandstaff Dr, Auburn, IN 46706</p>
+              <p className="mb-1 sm:mb-2 text-sm sm:text-base">📞 (855) 388-2635</p>
+              <p className="text-xs sm:text-sm opacity-90">Sales: Mon-Sat 9AM-7PM</p>
+              <p className="text-xs sm:text-sm opacity-90">Service: Mon-Fri 8:30AM-6PM</p>
             </div>
           </div>
-          <div className="mt-6 pt-6 border-t border-white/20 text-center">
-            <p className="text-lg mb-2">🚗 Easy Access from I-69 Exit 329</p>
-            <p className="opacity-90">Just 10 minutes north of Fort Wayne • Free customer parking • Full service departments</p>
+          <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/20 text-center">
+            <p className="text-base sm:text-lg mb-1 sm:mb-2">🚗 Easy Access from I-69 Exit 329</p>
+            <p className="text-xs sm:text-sm opacity-90">Just 10 minutes north of Fort Wayne • Free customer parking • Full service departments</p>
           </div>
         </div>
       </main>
@@ -256,14 +256,14 @@ export default function Home() {
       {/* Floating Chatbot Button (like dashboard) */}
       <button
         onClick={() => setShowChatbot(!showChatbot)}
-        className="fixed bottom-6 right-6 w-16 h-16 bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 flex items-center justify-center transition-all"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-14 h-14 sm:w-16 sm:h-16 bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 flex items-center justify-center transition-all z-50"
       >
         {showChatbot ? (
-          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          <ChatbotAvatar size={40} showOnline={false} />
+          <ChatbotAvatar size={36} showOnline={false} />
         )}
       </button>
 
