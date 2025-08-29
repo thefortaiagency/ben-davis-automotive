@@ -19,7 +19,7 @@ export async function POST(request: Request) {
       style: "vivid"
     });
 
-    if (response.data[0]?.url) {
+    if (response.data?.[0]?.url) {
       // Download and save the image
       const imageUrl = response.data[0].url;
       const imageResponse = await fetch(imageUrl);
