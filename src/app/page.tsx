@@ -124,16 +124,10 @@ export default function Home() {
               Where classic Auburn Cord Duesenberg tradition meets modern family dealership excellence.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-lg">
-                View Inventory
-              </button>
-              <button className="px-8 py-3 bg-white hover:bg-gray-100 text-blue-900 font-semibold rounded-lg transition-colors shadow-lg">
-                Schedule Service
-              </button>
+            <div className="flex justify-center">
               <button 
                 onClick={() => router.push('/dashboard')}
-                className="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors shadow-lg"
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-lg"
               >
                 Owner Dashboard →
               </button>
