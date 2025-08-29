@@ -105,7 +105,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80')`
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/hero-image.jpg')`
           }}
         ></div>
         
@@ -129,8 +129,8 @@ export default function Home() {
               "More than a dealer, we believe in making a difference"
             </p>
             <p className="text-lg opacity-90 mb-8">
-              Three generations of family values. Four decades of Auburn trust.
-              Your home for Chevrolet, Buick, Ford, and RV excellence.
+              Honoring Ben Davis's legacy (1937-2014) and Auburn's automotive heritage.
+              Where classic Auburn Cord Duesenberg tradition meets modern family dealership excellence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
