@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface Message {
   id: string;
@@ -15,7 +16,9 @@ export default function Home() {
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [currentSpeaker, setCurrentSpeaker] = useState<'ben' | 'brent'>('ben');
+  const [avatarUrl, setAvatarUrl] = useState('/bendavis.jpg');
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -24,6 +27,18 @@ export default function Home() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    // Generate AI avatar on mount
+    fetch('/api/generate-avatar', { method: 'POST' })
+      .then(res => res.json())
+      .then(data => {
+        if (data.imageUrl) {
+          setAvatarUrl(data.imageUrl);
+        }
+      })
+      .catch(console.error);
+  }, []);
 
   useEffect(() => {
     // Initial greeting from Ben
@@ -115,6 +130,12 @@ export default function Home() {
             <p className="text-sm font-medium text-gray-900">"More than a dealer,</p>
             <p className="text-sm font-medium text-blue-600">we believe in making a difference"</p>
           </div>
+          <button 
+            onClick={() => router.push('/dashboard')}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+          >
+            Owner Dashboard →
+          </button>
         </div>
       </header>
 
@@ -191,11 +212,11 @@ export default function Home() {
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 rounded-t-lg">
               <div className="flex items-center space-x-3">
                 <Image
-                  src="/bendavis.jpg"
+                  src={avatarUrl}
                   alt={currentSpeaker === 'ben' ? "Ben Davis" : "Brent Davis"}
                   width={50}
                   height={50}
-                  className="rounded-full border-2 border-white"
+                  className="rounded-full border-2 border-white object-cover"
                 />
                 <div>
                   <h3 className="font-bold text-lg">
@@ -252,7 +273,7 @@ export default function Home() {
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                   placeholder="Type your message..."
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-500"
                 />
                 <button
                   onClick={handleSendMessage}
