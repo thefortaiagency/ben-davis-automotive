@@ -124,13 +124,13 @@ export async function POST(request: Request) {
     console.error('Chat API error:', error);
     
     // Fallback responses if OpenAI fails
-    const fallbackResponses = {
+    const fallbackResponses: Record<string, string> = {
       ben: "You know, technology isn't always perfect, but what matters is that we're here to help you. How can we serve you today?",
       brent: "We're experiencing a technical issue, but our commitment to service never wavers. Let me help you another way."
     };
     
     return NextResponse.json({
-      response: fallbackResponses[request.body?.speaker || 'ben'],
+      response: fallbackResponses['ben'], // Default to Ben's response
       switchSpeaker: null,
     });
   }
