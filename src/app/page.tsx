@@ -111,18 +111,9 @@ export default function Home() {
         
         <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-4">
           <div className="max-w-4xl">
-            <div className="flex items-center justify-center space-x-4 mb-6">
-              <Image
-                src="/ben-davis-logo.jpg"
-                alt="Ben Davis Automotive Logo"
-                width={90}
-                height={90}
-                className="rounded-full border-4 border-white shadow-2xl ring-4 ring-white/30"
-              />
-              <div>
-                <h1 className="text-5xl font-bold mb-2">Ben Davis Automotive</h1>
-                <p className="text-xl font-light">Serving Auburn Since 1980</p>
-              </div>
+            <div className="mb-6">
+              <h1 className="text-5xl font-bold mb-2">Ben Davis Automotive</h1>
+              <p className="text-xl font-light">Serving Auburn Since 1980</p>
             </div>
             
             <p className="text-2xl mb-4 font-light">
@@ -151,8 +142,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Centered Logo Below Hero */}
+      <div className="flex justify-center -mt-12 relative z-20">
+        <Image
+          src="/ben-davis-logo.jpg"
+          alt="Ben Davis Automotive Logo"
+          width={90}
+          height={90}
+          className="rounded-full border-4 border-white shadow-2xl ring-4 ring-white/30"
+        />
+      </div>
+
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           
           {/* Left Column - Story & History */}
